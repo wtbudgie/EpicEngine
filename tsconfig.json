@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "target": "ES6",
+        "lib": ["ES2017", "DOM"],
+        "module": "ES6",
+        "moduleResolution": "Node",
+        "types": ["node", "@webgpu/types", "jquery"],
+        "allowJs": true,
+        "sourceMap": true,
+        "outDir": "./dist",
+        "rootDir": "./src",
+        "strict": true,
+        "noImplicitAny": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true
+    },
+    "include": ["src/**/*"],
+    "exclude": ["node_modules", "dist", "webpack.config.js"]
+}
