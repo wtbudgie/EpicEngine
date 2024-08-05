@@ -1,11 +1,13 @@
 import { GameObject } from "./GameObject";
 
 export class BaseComponent {
-  name: string;
-  gameObject: GameObject;
+    name: string;
+    parent: GameObject;
 
-  constructor(name: string, parentObject: GameObject) {
-    this.name = name;
-    this.gameObject = parentObject;
-  }
+    constructor(name: string, parent: GameObject) {
+        this.name = name;
+        this.parent = parent;
+    }
+
+    update = (): void => {};
 }

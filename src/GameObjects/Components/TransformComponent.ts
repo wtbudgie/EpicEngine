@@ -2,17 +2,15 @@ import { vec3 } from "gl-matrix";
 import { BaseComponent } from "../BaseComponent";
 import { GameObject } from "../GameObject";
 
-// Transform position is as [z, x, y]
-
 export class TransformComponent extends BaseComponent {
-  position: vec3;
-  eulers: vec3;
+    position: vec3;
+    eulers: vec3;
 
-  constructor(parent: GameObject) {
-    super("TransformComponent", parent);
+    constructor(parent: GameObject) {
+        super("TransformComponent", parent);
 
-    this.position = [0, 0, 0];
-    this.eulers = vec3.create();
-    this.eulers[2] = 0;
-  }
+        this.position = [0, 0, 0];
+        this.eulers = vec3.create();
+        this.eulers[2] = 0;
+    }
 }

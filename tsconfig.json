@@ -7,6 +7,8 @@
         "types": ["node", "@webgpu/types", "jquery"],
         "allowJs": true,
         "sourceMap": true,
+        "declaration": true,
+        "declarationDir": "./dist/types",
         "outDir": "./dist",
         "rootDir": "./src",
         "strict": true,
@@ -15,6 +17,6 @@
         "skipLibCheck": true,
         "forceConsistentCasingInFileNames": true
     },
-    "include": ["src/**/*"],
-    "exclude": ["node_modules", "dist", "webpack.config.js"]
+    "include": ["src/**/*", "test/app.js"],
+    "exclude": ["node_modules", "dist", "vite.config.ts"]
 }
