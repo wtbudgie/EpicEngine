@@ -15,6 +15,7 @@
         "@types/jquery": "^3.5.30",
         "@types/node": "^22.0.2",
         "@webgpu/types": "^0.1.44",
+        "live-server": "^1.2.0",
         "typescript": "^5.5.4"
     },
     "dependencies": {
