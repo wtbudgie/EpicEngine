@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EpicEngine UI Editor</title>
+
+    <style>
+      *,
+      html,
+      body {
+        padding: 0;
+        margin: 0;
+      }
+
+      .layout {
+        width: 100%;
+        height: 100vh;
+
+        display: grid;
+        grid:
+          "header header header" 30px
+          "hieracy viewport inspector" 1fr
+          "explorer explorer explorer" 150px
+          / 0.3fr 1fr 0.3fr;
+        gap: 8px;
+        grid-auto-flow: row dense;
+      }
+
+      .header {
+        grid-area: header;
+        background-color: blue;
+      }
+      .hieracy {
+        grid-area: hieracy;
+        background-color: red;
+      }
+      .viewport {
+        grid-area: viewport;
+        background-color: gray;
+      }
+      .inspector {
+        grid-area: inspector;
+        background-color: black;
+      }
+      .explorer {
+        grid-area: explorer;
+        background-color: brown;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="layout">
+      <div class="header">1</div>
+      <div class="hieracy">
+        <ul id="objList"></ul>
+      </div>
+      <div class="viewport">
+        <canvas id="canvas"></canvas>
+      </div>
+      <div class="inspector">null</div>
+      <div class="explorer">null</div>
+    </section>
+
+    <script src="./ui.js"></script>
+  </body>
+</html>

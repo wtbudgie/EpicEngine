@@ -1,93 +1,93 @@
-var M = 1e-6, g = typeof Float32Array < "u" ? Float32Array : Array, T = Math.random;
+var g = 1e-6, m = typeof Float32Array < "u" ? Float32Array : Array, w = Math.random;
 Math.hypot || (Math.hypot = function() {
   for (var e = 0, r = arguments.length; r--; )
     e += arguments[r] * arguments[r];
   return Math.sqrt(e);
 });
-function B() {
-  var e = new g(16);
-  return g != Float32Array && (e[1] = 0, e[2] = 0, e[3] = 0, e[4] = 0, e[6] = 0, e[7] = 0, e[8] = 0, e[9] = 0, e[11] = 0, e[12] = 0, e[13] = 0, e[14] = 0), e[0] = 1, e[5] = 1, e[10] = 1, e[15] = 1, e;
+function L() {
+  var e = new m(16);
+  return m != Float32Array && (e[1] = 0, e[2] = 0, e[3] = 0, e[4] = 0, e[6] = 0, e[7] = 0, e[8] = 0, e[9] = 0, e[11] = 0, e[12] = 0, e[13] = 0, e[14] = 0), e[0] = 1, e[5] = 1, e[10] = 1, e[15] = 1, e;
 }
-function re(e) {
+function le(e) {
   return e[0] = 1, e[1] = 0, e[2] = 0, e[3] = 0, e[4] = 0, e[5] = 1, e[6] = 0, e[7] = 0, e[8] = 0, e[9] = 0, e[10] = 1, e[11] = 0, e[12] = 0, e[13] = 0, e[14] = 0, e[15] = 1, e;
 }
-function O(e, r, t) {
-  var n = t[0], i = t[1], a = t[2], s, c, h, f, o, l, d, v, p, m, u, z;
-  return r === e ? (e[12] = r[0] * n + r[4] * i + r[8] * a + r[12], e[13] = r[1] * n + r[5] * i + r[9] * a + r[13], e[14] = r[2] * n + r[6] * i + r[10] * a + r[14], e[15] = r[3] * n + r[7] * i + r[11] * a + r[15]) : (s = r[0], c = r[1], h = r[2], f = r[3], o = r[4], l = r[5], d = r[6], v = r[7], p = r[8], m = r[9], u = r[10], z = r[11], e[0] = s, e[1] = c, e[2] = h, e[3] = f, e[4] = o, e[5] = l, e[6] = d, e[7] = v, e[8] = p, e[9] = m, e[10] = u, e[11] = z, e[12] = s * n + o * i + p * a + r[12], e[13] = c * n + l * i + m * a + r[13], e[14] = h * n + d * i + u * a + r[14], e[15] = f * n + v * i + z * a + r[15]), e;
+function U(e, r, t) {
+  var n = t[0], i = t[1], a = t[2], s, c, h, f, o, l, u, d, v, p, M, $;
+  return r === e ? (e[12] = r[0] * n + r[4] * i + r[8] * a + r[12], e[13] = r[1] * n + r[5] * i + r[9] * a + r[13], e[14] = r[2] * n + r[6] * i + r[10] * a + r[14], e[15] = r[3] * n + r[7] * i + r[11] * a + r[15]) : (s = r[0], c = r[1], h = r[2], f = r[3], o = r[4], l = r[5], u = r[6], d = r[7], v = r[8], p = r[9], M = r[10], $ = r[11], e[0] = s, e[1] = c, e[2] = h, e[3] = f, e[4] = o, e[5] = l, e[6] = u, e[7] = d, e[8] = v, e[9] = p, e[10] = M, e[11] = $, e[12] = s * n + o * i + v * a + r[12], e[13] = c * n + l * i + p * a + r[13], e[14] = h * n + u * i + M * a + r[14], e[15] = f * n + d * i + $ * a + r[15]), e;
 }
-function te(e, r, t) {
-  var n = Math.sin(t), i = Math.cos(t), a = r[0], s = r[1], c = r[2], h = r[3], f = r[4], o = r[5], l = r[6], d = r[7];
-  return r !== e && (e[8] = r[8], e[9] = r[9], e[10] = r[10], e[11] = r[11], e[12] = r[12], e[13] = r[13], e[14] = r[14], e[15] = r[15]), e[0] = a * i + f * n, e[1] = s * i + o * n, e[2] = c * i + l * n, e[3] = h * i + d * n, e[4] = f * i - a * n, e[5] = o * i - s * n, e[6] = l * i - c * n, e[7] = d * i - h * n, e;
+function de(e, r, t) {
+  var n = Math.sin(t), i = Math.cos(t), a = r[0], s = r[1], c = r[2], h = r[3], f = r[4], o = r[5], l = r[6], u = r[7];
+  return r !== e && (e[8] = r[8], e[9] = r[9], e[10] = r[10], e[11] = r[11], e[12] = r[12], e[13] = r[13], e[14] = r[14], e[15] = r[15]), e[0] = a * i + f * n, e[1] = s * i + o * n, e[2] = c * i + l * n, e[3] = h * i + u * n, e[4] = f * i - a * n, e[5] = o * i - s * n, e[6] = l * i - c * n, e[7] = u * i - h * n, e;
 }
-function ne(e, r, t, n, i) {
+function ue(e, r, t, n, i) {
   var a = 1 / Math.tan(r / 2), s;
   return e[0] = a / t, e[1] = 0, e[2] = 0, e[3] = 0, e[4] = 0, e[5] = a, e[6] = 0, e[7] = 0, e[8] = 0, e[9] = 0, e[11] = -1, e[12] = 0, e[13] = 0, e[15] = 0, i != null && i !== 1 / 0 ? (s = 1 / (n - i), e[10] = (i + n) * s, e[14] = 2 * i * n * s) : (e[10] = -1, e[14] = -2 * n), e;
 }
-var ie = ne;
-function ae(e, r, t, n) {
-  var i, a, s, c, h, f, o, l, d, v, p = r[0], m = r[1], u = r[2], z = n[0], $ = n[1], L = n[2], D = t[0], U = t[1], q = t[2];
-  return Math.abs(p - D) < M && Math.abs(m - U) < M && Math.abs(u - q) < M ? re(e) : (o = p - D, l = m - U, d = u - q, v = 1 / Math.hypot(o, l, d), o *= v, l *= v, d *= v, i = $ * d - L * l, a = L * o - z * d, s = z * l - $ * o, v = Math.hypot(i, a, s), v ? (v = 1 / v, i *= v, a *= v, s *= v) : (i = 0, a = 0, s = 0), c = l * s - d * a, h = d * i - o * s, f = o * a - l * i, v = Math.hypot(c, h, f), v ? (v = 1 / v, c *= v, h *= v, f *= v) : (c = 0, h = 0, f = 0), e[0] = i, e[1] = c, e[2] = o, e[3] = 0, e[4] = a, e[5] = h, e[6] = l, e[7] = 0, e[8] = s, e[9] = f, e[10] = d, e[11] = 0, e[12] = -(i * p + a * m + s * u), e[13] = -(c * p + h * m + f * u), e[14] = -(o * p + l * m + d * u), e[15] = 1, e);
+var ve = ue;
+function pe(e, r, t, n) {
+  var i, a, s, c, h, f, o, l, u, d, v = r[0], p = r[1], M = r[2], $ = n[0], G = n[1], S = n[2], D = t[0], P = t[1], O = t[2];
+  return Math.abs(v - D) < g && Math.abs(p - P) < g && Math.abs(M - O) < g ? le(e) : (o = v - D, l = p - P, u = M - O, d = 1 / Math.hypot(o, l, u), o *= d, l *= d, u *= d, i = G * u - S * l, a = S * o - $ * u, s = $ * l - G * o, d = Math.hypot(i, a, s), d ? (d = 1 / d, i *= d, a *= d, s *= d) : (i = 0, a = 0, s = 0), c = l * s - u * a, h = u * i - o * s, f = o * a - l * i, d = Math.hypot(c, h, f), d ? (d = 1 / d, c *= d, h *= d, f *= d) : (c = 0, h = 0, f = 0), e[0] = i, e[1] = c, e[2] = o, e[3] = 0, e[4] = a, e[5] = h, e[6] = l, e[7] = 0, e[8] = s, e[9] = f, e[10] = u, e[11] = 0, e[12] = -(i * v + a * p + s * M), e[13] = -(c * v + h * p + f * M), e[14] = -(o * v + l * p + u * M), e[15] = 1, e);
 }
-function w() {
-  var e = new g(3);
-  return g != Float32Array && (e[0] = 0, e[1] = 0, e[2] = 0), e;
+function z() {
+  var e = new m(3);
+  return m != Float32Array && (e[0] = 0, e[1] = 0, e[2] = 0), e;
 }
-function se(e) {
-  var r = new g(3);
+function me(e) {
+  var r = new m(3);
   return r[0] = e[0], r[1] = e[1], r[2] = e[2], r;
 }
-function I(e) {
+function j(e) {
   var r = e[0], t = e[1], n = e[2];
   return Math.hypot(r, t, n);
 }
-function ce(e, r, t) {
-  var n = new g(3);
+function Me(e, r, t) {
+  var n = new m(3);
   return n[0] = e, n[1] = r, n[2] = t, n;
 }
-function he(e, r) {
+function ge(e, r) {
   return e[0] = r[0], e[1] = r[1], e[2] = r[2], e;
 }
-function oe(e, r, t, n) {
+function ye(e, r, t, n) {
   return e[0] = r, e[1] = t, e[2] = n, e;
 }
-function R(e, r, t) {
+function I(e, r, t) {
   return e[0] = r[0] + t[0], e[1] = r[1] + t[1], e[2] = r[2] + t[2], e;
 }
-function j(e, r, t) {
+function R(e, r, t) {
   return e[0] = r[0] - t[0], e[1] = r[1] - t[1], e[2] = r[2] - t[2], e;
 }
-function F(e, r, t) {
+function V(e, r, t) {
   return e[0] = r[0] * t[0], e[1] = r[1] * t[1], e[2] = r[2] * t[2], e;
 }
-function V(e, r, t) {
+function N(e, r, t) {
   return e[0] = r[0] / t[0], e[1] = r[1] / t[1], e[2] = r[2] / t[2], e;
 }
-function fe(e, r) {
+function xe(e, r) {
   return e[0] = Math.ceil(r[0]), e[1] = Math.ceil(r[1]), e[2] = Math.ceil(r[2]), e;
 }
-function le(e, r) {
+function we(e, r) {
   return e[0] = Math.floor(r[0]), e[1] = Math.floor(r[1]), e[2] = Math.floor(r[2]), e;
 }
-function de(e, r, t) {
+function ze(e, r, t) {
   return e[0] = Math.min(r[0], t[0]), e[1] = Math.min(r[1], t[1]), e[2] = Math.min(r[2], t[2]), e;
 }
-function ve(e, r, t) {
+function $e(e, r, t) {
   return e[0] = Math.max(r[0], t[0]), e[1] = Math.max(r[1], t[1]), e[2] = Math.max(r[2], t[2]), e;
 }
-function ue(e, r) {
+function Ce(e, r) {
   return e[0] = Math.round(r[0]), e[1] = Math.round(r[1]), e[2] = Math.round(r[2]), e;
 }
-function pe(e, r, t) {
+function Te(e, r, t) {
   return e[0] = r[0] * t, e[1] = r[1] * t, e[2] = r[2] * t, e;
 }
-function me(e, r, t, n) {
+function Ee(e, r, t, n) {
   return e[0] = r[0] + t[0] * n, e[1] = r[1] + t[1] * n, e[2] = r[2] + t[2] * n, e;
 }
-function N(e, r) {
+function _(e, r) {
   var t = r[0] - e[0], n = r[1] - e[1], i = r[2] - e[2];
   return Math.hypot(t, n, i);
 }
-function _(e, r) {
+function k(e, r) {
   var t = r[0] - e[0], n = r[1] - e[1], i = r[2] - e[2];
   return t * t + n * n + i * i;
 }
@@ -95,83 +95,83 @@ function Q(e) {
   var r = e[0], t = e[1], n = e[2];
   return r * r + t * t + n * n;
 }
-function Me(e, r) {
+function Ae(e, r) {
   return e[0] = -r[0], e[1] = -r[1], e[2] = -r[2], e;
 }
-function ge(e, r) {
+function Be(e, r) {
   return e[0] = 1 / r[0], e[1] = 1 / r[1], e[2] = 1 / r[2], e;
 }
-function ye(e, r) {
+function qe(e, r) {
   var t = r[0], n = r[1], i = r[2], a = t * t + n * n + i * i;
   return a > 0 && (a = 1 / Math.sqrt(a)), e[0] = r[0] * a, e[1] = r[1] * a, e[2] = r[2] * a, e;
 }
 function Y(e, r) {
   return e[0] * r[0] + e[1] * r[1] + e[2] * r[2];
 }
-function S(e, r, t) {
+function q(e, r, t) {
   var n = r[0], i = r[1], a = r[2], s = t[0], c = t[1], h = t[2];
   return e[0] = i * h - a * c, e[1] = a * s - n * h, e[2] = n * c - i * s, e;
 }
-function xe(e, r, t, n) {
+function Le(e, r, t, n) {
   var i = r[0], a = r[1], s = r[2];
   return e[0] = i + n * (t[0] - i), e[1] = a + n * (t[1] - a), e[2] = s + n * (t[2] - s), e;
 }
-function we(e, r, t, n, i, a) {
+function be(e, r, t, n, i, a) {
   var s = a * a, c = s * (2 * a - 3) + 1, h = s * (a - 2) + a, f = s * (a - 1), o = s * (3 - 2 * a);
   return e[0] = r[0] * c + t[0] * h + n[0] * f + i[0] * o, e[1] = r[1] * c + t[1] * h + n[1] * f + i[1] * o, e[2] = r[2] * c + t[2] * h + n[2] * f + i[2] * o, e;
 }
-function ze(e, r, t, n, i, a) {
-  var s = 1 - a, c = s * s, h = a * a, f = c * s, o = 3 * a * c, l = 3 * h * s, d = h * a;
-  return e[0] = r[0] * f + t[0] * o + n[0] * l + i[0] * d, e[1] = r[1] * f + t[1] * o + n[1] * l + i[1] * d, e[2] = r[2] * f + t[2] * o + n[2] * l + i[2] * d, e;
+function Ge(e, r, t, n, i, a) {
+  var s = 1 - a, c = s * s, h = a * a, f = c * s, o = 3 * a * c, l = 3 * h * s, u = h * a;
+  return e[0] = r[0] * f + t[0] * o + n[0] * l + i[0] * u, e[1] = r[1] * f + t[1] * o + n[1] * l + i[1] * u, e[2] = r[2] * f + t[2] * o + n[2] * l + i[2] * u, e;
 }
-function Ce(e, r) {
+function Se(e, r) {
   r = r || 1;
-  var t = T() * 2 * Math.PI, n = T() * 2 - 1, i = Math.sqrt(1 - n * n) * r;
+  var t = w() * 2 * Math.PI, n = w() * 2 - 1, i = Math.sqrt(1 - n * n) * r;
   return e[0] = Math.cos(t) * i, e[1] = Math.sin(t) * i, e[2] = n * r, e;
 }
-function Te(e, r, t) {
+function De(e, r, t) {
   var n = r[0], i = r[1], a = r[2], s = t[3] * n + t[7] * i + t[11] * a + t[15];
   return s = s || 1, e[0] = (t[0] * n + t[4] * i + t[8] * a + t[12]) / s, e[1] = (t[1] * n + t[5] * i + t[9] * a + t[13]) / s, e[2] = (t[2] * n + t[6] * i + t[10] * a + t[14]) / s, e;
 }
-function Ge(e, r, t) {
+function Pe(e, r, t) {
   var n = r[0], i = r[1], a = r[2];
   return e[0] = n * t[0] + i * t[3] + a * t[6], e[1] = n * t[1] + i * t[4] + a * t[7], e[2] = n * t[2] + i * t[5] + a * t[8], e;
 }
-function Ae(e, r, t) {
-  var n = t[0], i = t[1], a = t[2], s = t[3], c = r[0], h = r[1], f = r[2], o = i * f - a * h, l = a * c - n * f, d = n * h - i * c, v = i * d - a * l, p = a * o - n * d, m = n * l - i * o, u = s * 2;
-  return o *= u, l *= u, d *= u, v *= 2, p *= 2, m *= 2, e[0] = c + o + v, e[1] = h + l + p, e[2] = f + d + m, e;
+function Oe(e, r, t) {
+  var n = t[0], i = t[1], a = t[2], s = t[3], c = r[0], h = r[1], f = r[2], o = i * f - a * h, l = a * c - n * f, u = n * h - i * c, d = i * u - a * l, v = a * o - n * u, p = n * l - i * o, M = s * 2;
+  return o *= M, l *= M, u *= M, d *= 2, v *= 2, p *= 2, e[0] = c + o + d, e[1] = h + l + v, e[2] = f + u + p, e;
 }
-function Be(e, r, t, n) {
+function Ue(e, r, t, n) {
   var i = [], a = [];
   return i[0] = r[0] - t[0], i[1] = r[1] - t[1], i[2] = r[2] - t[2], a[0] = i[0], a[1] = i[1] * Math.cos(n) - i[2] * Math.sin(n), a[2] = i[1] * Math.sin(n) + i[2] * Math.cos(n), e[0] = a[0] + t[0], e[1] = a[1] + t[1], e[2] = a[2] + t[2], e;
 }
-function Ee(e, r, t, n) {
+function Fe(e, r, t, n) {
   var i = [], a = [];
   return i[0] = r[0] - t[0], i[1] = r[1] - t[1], i[2] = r[2] - t[2], a[0] = i[2] * Math.sin(n) + i[0] * Math.cos(n), a[1] = i[1], a[2] = i[2] * Math.cos(n) - i[0] * Math.sin(n), e[0] = a[0] + t[0], e[1] = a[1] + t[1], e[2] = a[2] + t[2], e;
 }
-function Se(e, r, t, n) {
+function je(e, r, t, n) {
   var i = [], a = [];
   return i[0] = r[0] - t[0], i[1] = r[1] - t[1], i[2] = r[2] - t[2], a[0] = i[0] * Math.cos(n) - i[1] * Math.sin(n), a[1] = i[0] * Math.sin(n) + i[1] * Math.cos(n), a[2] = i[2], e[0] = a[0] + t[0], e[1] = a[1] + t[1], e[2] = a[2] + t[2], e;
 }
-function Pe(e, r) {
+function Ie(e, r) {
   var t = e[0], n = e[1], i = e[2], a = r[0], s = r[1], c = r[2], h = Math.sqrt(t * t + n * n + i * i), f = Math.sqrt(a * a + s * s + c * c), o = h * f, l = o && Y(e, r) / o;
   return Math.acos(Math.min(Math.max(l, -1), 1));
 }
-function $e(e) {
+function Re(e) {
   return e[0] = 0, e[1] = 0, e[2] = 0, e;
 }
-function Le(e) {
+function Ve(e) {
   return "vec3(" + e[0] + ", " + e[1] + ", " + e[2] + ")";
 }
-function De(e, r) {
+function Ne(e, r) {
   return e[0] === r[0] && e[1] === r[1] && e[2] === r[2];
 }
-function Ue(e, r) {
+function _e(e, r) {
   var t = e[0], n = e[1], i = e[2], a = r[0], s = r[1], c = r[2];
-  return Math.abs(t - a) <= M * Math.max(1, Math.abs(t), Math.abs(a)) && Math.abs(n - s) <= M * Math.max(1, Math.abs(n), Math.abs(s)) && Math.abs(i - c) <= M * Math.max(1, Math.abs(i), Math.abs(c));
+  return Math.abs(t - a) <= g * Math.max(1, Math.abs(t), Math.abs(a)) && Math.abs(n - s) <= g * Math.max(1, Math.abs(n), Math.abs(s)) && Math.abs(i - c) <= g * Math.max(1, Math.abs(i), Math.abs(c));
 }
-var qe = j, be = F, Oe = V, Ie = N, Re = _, je = I, Fe = Q, Ve = function() {
-  var e = w();
+var ke = R, Qe = V, Ye = N, Xe = _, Je = k, He = j, We = Q, Ze = function() {
+  var e = z();
   return function(r, t, n, i, a, s) {
     var c, h;
     for (t || (t = 3), n || (n = 0), i ? h = Math.min(i * t + n, r.length) : h = r.length, c = n; c < h; c += t)
@@ -179,79 +179,79 @@ var qe = j, be = F, Oe = V, Ie = N, Re = _, je = I, Fe = Q, Ve = function() {
     return r;
   };
 }();
-const Pr = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const $t = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  add: R,
-  angle: Pe,
-  bezier: ze,
-  ceil: fe,
-  clone: se,
-  copy: he,
-  create: w,
-  cross: S,
-  dist: Ie,
-  distance: N,
-  div: Oe,
-  divide: V,
+  add: I,
+  angle: Ie,
+  bezier: Ge,
+  ceil: xe,
+  clone: me,
+  copy: ge,
+  create: z,
+  cross: q,
+  dist: Xe,
+  distance: _,
+  div: Ye,
+  divide: N,
   dot: Y,
-  equals: Ue,
-  exactEquals: De,
-  floor: le,
-  forEach: Ve,
-  fromValues: ce,
-  hermite: we,
-  inverse: ge,
-  len: je,
-  length: I,
-  lerp: xe,
-  max: ve,
-  min: de,
-  mul: be,
-  multiply: F,
-  negate: Me,
-  normalize: ye,
-  random: Ce,
-  rotateX: Be,
-  rotateY: Ee,
-  rotateZ: Se,
-  round: ue,
-  scale: pe,
-  scaleAndAdd: me,
-  set: oe,
-  sqrDist: Re,
-  sqrLen: Fe,
-  squaredDistance: _,
+  equals: _e,
+  exactEquals: Ne,
+  floor: we,
+  forEach: Ze,
+  fromValues: Me,
+  hermite: be,
+  inverse: Be,
+  len: He,
+  length: j,
+  lerp: Le,
+  max: $e,
+  min: ze,
+  mul: Qe,
+  multiply: V,
+  negate: Ae,
+  normalize: qe,
+  random: Se,
+  rotateX: Ue,
+  rotateY: Fe,
+  rotateZ: je,
+  round: Ce,
+  scale: Te,
+  scaleAndAdd: Ee,
+  set: ye,
+  sqrDist: Je,
+  sqrLen: We,
+  squaredDistance: k,
   squaredLength: Q,
-  str: Le,
-  sub: qe,
-  subtract: j,
-  transformMat3: Ge,
-  transformMat4: Te,
-  transformQuat: Ae,
-  zero: $e
+  str: Ve,
+  sub: ke,
+  subtract: R,
+  transformMat3: Pe,
+  transformMat4: De,
+  transformQuat: Oe,
+  zero: Re
 }, Symbol.toStringTag, { value: "Module" }));
 function X() {
-  var e = new g(4);
-  return g != Float32Array && (e[0] = 0, e[1] = 0, e[2] = 0, e[3] = 0), e;
+  var e = new m(4);
+  return m != Float32Array && (e[0] = 0, e[1] = 0, e[2] = 0, e[3] = 0), e;
 }
-function Ne(e) {
-  var r = new g(4);
+function Ke(e) {
+  var r = new m(4);
   return r[0] = e[0], r[1] = e[1], r[2] = e[2], r[3] = e[3], r;
 }
-function _e(e, r, t, n) {
-  var i = new g(4);
+function er(e, r, t, n) {
+  var i = new m(4);
   return i[0] = e, i[1] = r, i[2] = t, i[3] = n, i;
 }
-function Qe(e, r) {
+function rr(e, r) {
   return e[0] = r[0], e[1] = r[1], e[2] = r[2], e[3] = r[3], e;
 }
-function Ye(e, r, t, n, i) {
+function tr(e, r, t, n, i) {
   return e[0] = r, e[1] = t, e[2] = n, e[3] = i, e;
 }
-function Xe(e, r, t) {
+function nr(e, r, t) {
   return e[0] = r[0] + t[0], e[1] = r[1] + t[1], e[2] = r[2] + t[2], e[3] = r[3] + t[3], e;
 }
-function k(e, r, t) {
+function J(e, r, t) {
   return e[0] = r[0] - t[0], e[1] = r[1] - t[1], e[2] = r[2] - t[2], e[3] = r[3] - t[3], e;
 }
 function H(e, r, t) {
@@ -260,98 +260,98 @@ function H(e, r, t) {
 function W(e, r, t) {
   return e[0] = r[0] / t[0], e[1] = r[1] / t[1], e[2] = r[2] / t[2], e[3] = r[3] / t[3], e;
 }
-function ke(e, r) {
+function ir(e, r) {
   return e[0] = Math.ceil(r[0]), e[1] = Math.ceil(r[1]), e[2] = Math.ceil(r[2]), e[3] = Math.ceil(r[3]), e;
 }
-function He(e, r) {
+function ar(e, r) {
   return e[0] = Math.floor(r[0]), e[1] = Math.floor(r[1]), e[2] = Math.floor(r[2]), e[3] = Math.floor(r[3]), e;
 }
-function We(e, r, t) {
+function sr(e, r, t) {
   return e[0] = Math.min(r[0], t[0]), e[1] = Math.min(r[1], t[1]), e[2] = Math.min(r[2], t[2]), e[3] = Math.min(r[3], t[3]), e;
 }
-function Ze(e, r, t) {
+function cr(e, r, t) {
   return e[0] = Math.max(r[0], t[0]), e[1] = Math.max(r[1], t[1]), e[2] = Math.max(r[2], t[2]), e[3] = Math.max(r[3], t[3]), e;
 }
-function Je(e, r) {
+function hr(e, r) {
   return e[0] = Math.round(r[0]), e[1] = Math.round(r[1]), e[2] = Math.round(r[2]), e[3] = Math.round(r[3]), e;
 }
-function Ke(e, r, t) {
+function or(e, r, t) {
   return e[0] = r[0] * t, e[1] = r[1] * t, e[2] = r[2] * t, e[3] = r[3] * t, e;
 }
-function er(e, r, t, n) {
+function fr(e, r, t, n) {
   return e[0] = r[0] + t[0] * n, e[1] = r[1] + t[1] * n, e[2] = r[2] + t[2] * n, e[3] = r[3] + t[3] * n, e;
 }
 function Z(e, r) {
   var t = r[0] - e[0], n = r[1] - e[1], i = r[2] - e[2], a = r[3] - e[3];
   return Math.hypot(t, n, i, a);
 }
-function J(e, r) {
+function K(e, r) {
   var t = r[0] - e[0], n = r[1] - e[1], i = r[2] - e[2], a = r[3] - e[3];
   return t * t + n * n + i * i + a * a;
 }
-function K(e) {
+function ee(e) {
   var r = e[0], t = e[1], n = e[2], i = e[3];
   return Math.hypot(r, t, n, i);
 }
-function ee(e) {
+function re(e) {
   var r = e[0], t = e[1], n = e[2], i = e[3];
   return r * r + t * t + n * n + i * i;
 }
-function rr(e, r) {
+function lr(e, r) {
   return e[0] = -r[0], e[1] = -r[1], e[2] = -r[2], e[3] = -r[3], e;
 }
-function tr(e, r) {
+function dr(e, r) {
   return e[0] = 1 / r[0], e[1] = 1 / r[1], e[2] = 1 / r[2], e[3] = 1 / r[3], e;
 }
-function nr(e, r) {
+function ur(e, r) {
   var t = r[0], n = r[1], i = r[2], a = r[3], s = t * t + n * n + i * i + a * a;
   return s > 0 && (s = 1 / Math.sqrt(s)), e[0] = t * s, e[1] = n * s, e[2] = i * s, e[3] = a * s, e;
 }
-function ir(e, r) {
+function vr(e, r) {
   return e[0] * r[0] + e[1] * r[1] + e[2] * r[2] + e[3] * r[3];
 }
-function ar(e, r, t, n) {
-  var i = t[0] * n[1] - t[1] * n[0], a = t[0] * n[2] - t[2] * n[0], s = t[0] * n[3] - t[3] * n[0], c = t[1] * n[2] - t[2] * n[1], h = t[1] * n[3] - t[3] * n[1], f = t[2] * n[3] - t[3] * n[2], o = r[0], l = r[1], d = r[2], v = r[3];
-  return e[0] = l * f - d * h + v * c, e[1] = -(o * f) + d * s - v * a, e[2] = o * h - l * s + v * i, e[3] = -(o * c) + l * a - d * i, e;
+function pr(e, r, t, n) {
+  var i = t[0] * n[1] - t[1] * n[0], a = t[0] * n[2] - t[2] * n[0], s = t[0] * n[3] - t[3] * n[0], c = t[1] * n[2] - t[2] * n[1], h = t[1] * n[3] - t[3] * n[1], f = t[2] * n[3] - t[3] * n[2], o = r[0], l = r[1], u = r[2], d = r[3];
+  return e[0] = l * f - u * h + d * c, e[1] = -(o * f) + u * s - d * a, e[2] = o * h - l * s + d * i, e[3] = -(o * c) + l * a - u * i, e;
 }
-function sr(e, r, t, n) {
+function mr(e, r, t, n) {
   var i = r[0], a = r[1], s = r[2], c = r[3];
   return e[0] = i + n * (t[0] - i), e[1] = a + n * (t[1] - a), e[2] = s + n * (t[2] - s), e[3] = c + n * (t[3] - c), e;
 }
-function cr(e, r) {
+function Mr(e, r) {
   r = r || 1;
   var t, n, i, a, s, c;
   do
-    t = T() * 2 - 1, n = T() * 2 - 1, s = t * t + n * n;
+    t = w() * 2 - 1, n = w() * 2 - 1, s = t * t + n * n;
   while (s >= 1);
   do
-    i = T() * 2 - 1, a = T() * 2 - 1, c = i * i + a * a;
+    i = w() * 2 - 1, a = w() * 2 - 1, c = i * i + a * a;
   while (c >= 1);
   var h = Math.sqrt((1 - s) / c);
   return e[0] = r * t, e[1] = r * n, e[2] = r * i * h, e[3] = r * a * h, e;
 }
-function hr(e, r, t) {
+function gr(e, r, t) {
   var n = r[0], i = r[1], a = r[2], s = r[3];
   return e[0] = t[0] * n + t[4] * i + t[8] * a + t[12] * s, e[1] = t[1] * n + t[5] * i + t[9] * a + t[13] * s, e[2] = t[2] * n + t[6] * i + t[10] * a + t[14] * s, e[3] = t[3] * n + t[7] * i + t[11] * a + t[15] * s, e;
 }
-function or(e, r, t) {
-  var n = r[0], i = r[1], a = r[2], s = t[0], c = t[1], h = t[2], f = t[3], o = f * n + c * a - h * i, l = f * i + h * n - s * a, d = f * a + s * i - c * n, v = -s * n - c * i - h * a;
-  return e[0] = o * f + v * -s + l * -h - d * -c, e[1] = l * f + v * -c + d * -s - o * -h, e[2] = d * f + v * -h + o * -c - l * -s, e[3] = r[3], e;
+function yr(e, r, t) {
+  var n = r[0], i = r[1], a = r[2], s = t[0], c = t[1], h = t[2], f = t[3], o = f * n + c * a - h * i, l = f * i + h * n - s * a, u = f * a + s * i - c * n, d = -s * n - c * i - h * a;
+  return e[0] = o * f + d * -s + l * -h - u * -c, e[1] = l * f + d * -c + u * -s - o * -h, e[2] = u * f + d * -h + o * -c - l * -s, e[3] = r[3], e;
 }
-function fr(e) {
+function xr(e) {
   return e[0] = 0, e[1] = 0, e[2] = 0, e[3] = 0, e;
 }
-function lr(e) {
+function wr(e) {
   return "vec4(" + e[0] + ", " + e[1] + ", " + e[2] + ", " + e[3] + ")";
 }
-function dr(e, r) {
+function zr(e, r) {
   return e[0] === r[0] && e[1] === r[1] && e[2] === r[2] && e[3] === r[3];
 }
-function vr(e, r) {
+function $r(e, r) {
   var t = e[0], n = e[1], i = e[2], a = e[3], s = r[0], c = r[1], h = r[2], f = r[3];
-  return Math.abs(t - s) <= M * Math.max(1, Math.abs(t), Math.abs(s)) && Math.abs(n - c) <= M * Math.max(1, Math.abs(n), Math.abs(c)) && Math.abs(i - h) <= M * Math.max(1, Math.abs(i), Math.abs(h)) && Math.abs(a - f) <= M * Math.max(1, Math.abs(a), Math.abs(f));
+  return Math.abs(t - s) <= g * Math.max(1, Math.abs(t), Math.abs(s)) && Math.abs(n - c) <= g * Math.max(1, Math.abs(n), Math.abs(c)) && Math.abs(i - h) <= g * Math.max(1, Math.abs(i), Math.abs(h)) && Math.abs(a - f) <= g * Math.max(1, Math.abs(a), Math.abs(f));
 }
-var ur = k, pr = H, mr = W, Mr = Z, gr = J, yr = K, xr = ee, wr = function() {
+var Cr = J, Tr = H, Er = W, Ar = Z, Br = K, qr = ee, Lr = re, br = function() {
   var e = X();
   return function(r, t, n, i, a, s) {
     var c, h;
@@ -360,120 +360,459 @@ var ur = k, pr = H, mr = W, Mr = Z, gr = J, yr = K, xr = ee, wr = function() {
     return r;
   };
 }();
-const $r = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const Ct = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  add: Xe,
-  ceil: ke,
-  clone: Ne,
-  copy: Qe,
+  add: nr,
+  ceil: ir,
+  clone: Ke,
+  copy: rr,
   create: X,
-  cross: ar,
-  dist: Mr,
+  cross: pr,
+  dist: Ar,
   distance: Z,
-  div: mr,
+  div: Er,
   divide: W,
-  dot: ir,
-  equals: vr,
-  exactEquals: dr,
-  floor: He,
-  forEach: wr,
-  fromValues: _e,
-  inverse: tr,
-  len: yr,
-  length: K,
-  lerp: sr,
-  max: Ze,
-  min: We,
-  mul: pr,
+  dot: vr,
+  equals: $r,
+  exactEquals: zr,
+  floor: ar,
+  forEach: br,
+  fromValues: er,
+  inverse: dr,
+  len: qr,
+  length: ee,
+  lerp: mr,
+  max: cr,
+  min: sr,
+  mul: Tr,
   multiply: H,
-  negate: rr,
-  normalize: nr,
-  random: cr,
-  round: Je,
-  scale: Ke,
-  scaleAndAdd: er,
-  set: Ye,
-  sqrDist: gr,
-  sqrLen: xr,
-  squaredDistance: J,
-  squaredLength: ee,
-  str: lr,
-  sub: ur,
-  subtract: k,
-  transformMat4: hr,
-  transformQuat: or,
-  zero: fr
+  negate: lr,
+  normalize: ur,
+  random: Mr,
+  round: hr,
+  scale: or,
+  scaleAndAdd: fr,
+  set: tr,
+  sqrDist: Br,
+  sqrLen: Lr,
+  squaredDistance: K,
+  squaredLength: re,
+  str: wr,
+  sub: Cr,
+  subtract: J,
+  transformMat4: gr,
+  transformQuat: yr,
+  zero: xr
 }, Symbol.toStringTag, { value: "Module" }));
-class E {
+function te() {
+  var e = new m(2);
+  return m != Float32Array && (e[0] = 0, e[1] = 0), e;
+}
+function Gr(e) {
+  var r = new m(2);
+  return r[0] = e[0], r[1] = e[1], r;
+}
+function Sr(e, r) {
+  var t = new m(2);
+  return t[0] = e, t[1] = r, t;
+}
+function Dr(e, r) {
+  return e[0] = r[0], e[1] = r[1], e;
+}
+function Pr(e, r, t) {
+  return e[0] = r, e[1] = t, e;
+}
+function Or(e, r, t) {
+  return e[0] = r[0] + t[0], e[1] = r[1] + t[1], e;
+}
+function ne(e, r, t) {
+  return e[0] = r[0] - t[0], e[1] = r[1] - t[1], e;
+}
+function ie(e, r, t) {
+  return e[0] = r[0] * t[0], e[1] = r[1] * t[1], e;
+}
+function ae(e, r, t) {
+  return e[0] = r[0] / t[0], e[1] = r[1] / t[1], e;
+}
+function Ur(e, r) {
+  return e[0] = Math.ceil(r[0]), e[1] = Math.ceil(r[1]), e;
+}
+function Fr(e, r) {
+  return e[0] = Math.floor(r[0]), e[1] = Math.floor(r[1]), e;
+}
+function jr(e, r, t) {
+  return e[0] = Math.min(r[0], t[0]), e[1] = Math.min(r[1], t[1]), e;
+}
+function Ir(e, r, t) {
+  return e[0] = Math.max(r[0], t[0]), e[1] = Math.max(r[1], t[1]), e;
+}
+function Rr(e, r) {
+  return e[0] = Math.round(r[0]), e[1] = Math.round(r[1]), e;
+}
+function Vr(e, r, t) {
+  return e[0] = r[0] * t, e[1] = r[1] * t, e;
+}
+function Nr(e, r, t, n) {
+  return e[0] = r[0] + t[0] * n, e[1] = r[1] + t[1] * n, e;
+}
+function se(e, r) {
+  var t = r[0] - e[0], n = r[1] - e[1];
+  return Math.hypot(t, n);
+}
+function ce(e, r) {
+  var t = r[0] - e[0], n = r[1] - e[1];
+  return t * t + n * n;
+}
+function he(e) {
+  var r = e[0], t = e[1];
+  return Math.hypot(r, t);
+}
+function oe(e) {
+  var r = e[0], t = e[1];
+  return r * r + t * t;
+}
+function _r(e, r) {
+  return e[0] = -r[0], e[1] = -r[1], e;
+}
+function kr(e, r) {
+  return e[0] = 1 / r[0], e[1] = 1 / r[1], e;
+}
+function Qr(e, r) {
+  var t = r[0], n = r[1], i = t * t + n * n;
+  return i > 0 && (i = 1 / Math.sqrt(i)), e[0] = r[0] * i, e[1] = r[1] * i, e;
+}
+function Yr(e, r) {
+  return e[0] * r[0] + e[1] * r[1];
+}
+function Xr(e, r, t) {
+  var n = r[0] * t[1] - r[1] * t[0];
+  return e[0] = e[1] = 0, e[2] = n, e;
+}
+function Jr(e, r, t, n) {
+  var i = r[0], a = r[1];
+  return e[0] = i + n * (t[0] - i), e[1] = a + n * (t[1] - a), e;
+}
+function Hr(e, r) {
+  r = r || 1;
+  var t = w() * 2 * Math.PI;
+  return e[0] = Math.cos(t) * r, e[1] = Math.sin(t) * r, e;
+}
+function Wr(e, r, t) {
+  var n = r[0], i = r[1];
+  return e[0] = t[0] * n + t[2] * i, e[1] = t[1] * n + t[3] * i, e;
+}
+function Zr(e, r, t) {
+  var n = r[0], i = r[1];
+  return e[0] = t[0] * n + t[2] * i + t[4], e[1] = t[1] * n + t[3] * i + t[5], e;
+}
+function Kr(e, r, t) {
+  var n = r[0], i = r[1];
+  return e[0] = t[0] * n + t[3] * i + t[6], e[1] = t[1] * n + t[4] * i + t[7], e;
+}
+function et(e, r, t) {
+  var n = r[0], i = r[1];
+  return e[0] = t[0] * n + t[4] * i + t[12], e[1] = t[1] * n + t[5] * i + t[13], e;
+}
+function rt(e, r, t, n) {
+  var i = r[0] - t[0], a = r[1] - t[1], s = Math.sin(n), c = Math.cos(n);
+  return e[0] = i * c - a * s + t[0], e[1] = i * s + a * c + t[1], e;
+}
+function tt(e, r) {
+  var t = e[0], n = e[1], i = r[0], a = r[1], s = Math.sqrt(t * t + n * n) * Math.sqrt(i * i + a * a), c = s && (t * i + n * a) / s;
+  return Math.acos(Math.min(Math.max(c, -1), 1));
+}
+function nt(e) {
+  return e[0] = 0, e[1] = 0, e;
+}
+function it(e) {
+  return "vec2(" + e[0] + ", " + e[1] + ")";
+}
+function at(e, r) {
+  return e[0] === r[0] && e[1] === r[1];
+}
+function st(e, r) {
+  var t = e[0], n = e[1], i = r[0], a = r[1];
+  return Math.abs(t - i) <= g * Math.max(1, Math.abs(t), Math.abs(i)) && Math.abs(n - a) <= g * Math.max(1, Math.abs(n), Math.abs(a));
+}
+var ct = he, ht = ne, ot = ie, ft = ae, lt = se, dt = ce, ut = oe, vt = function() {
+  var e = te();
+  return function(r, t, n, i, a, s) {
+    var c, h;
+    for (t || (t = 2), n || (n = 0), i ? h = Math.min(i * t + n, r.length) : h = r.length, c = n; c < h; c += t)
+      e[0] = r[c], e[1] = r[c + 1], a(e, e, s), r[c] = e[0], r[c + 1] = e[1];
+    return r;
+  };
+}();
+const Tt = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  add: Or,
+  angle: tt,
+  ceil: Ur,
+  clone: Gr,
+  copy: Dr,
+  create: te,
+  cross: Xr,
+  dist: lt,
+  distance: se,
+  div: ft,
+  divide: ae,
+  dot: Yr,
+  equals: st,
+  exactEquals: at,
+  floor: Fr,
+  forEach: vt,
+  fromValues: Sr,
+  inverse: kr,
+  len: ct,
+  length: he,
+  lerp: Jr,
+  max: Ir,
+  min: jr,
+  mul: ot,
+  multiply: ie,
+  negate: _r,
+  normalize: Qr,
+  random: Hr,
+  rotate: rt,
+  round: Rr,
+  scale: Vr,
+  scaleAndAdd: Nr,
+  set: Pr,
+  sqrDist: dt,
+  sqrLen: ut,
+  squaredDistance: ce,
+  squaredLength: oe,
+  str: it,
+  sub: ht,
+  subtract: ne,
+  transformMat2: Wr,
+  transformMat2d: Zr,
+  transformMat3: Kr,
+  transformMat4: et,
+  zero: nt
+}, Symbol.toStringTag, { value: "Module" }));
+class B {
   constructor(r, t) {
     this.update = () => {
     }, this.name = r, this.parent = t;
   }
 }
-const C = (e) => e * Math.PI / 180, zr = (e) => {
+const C = (e) => e * Math.PI / 180, pt = (e) => {
   const r = Math.pow(10, e - 1), t = Math.pow(10, e) - 1;
   return Math.floor(Math.random() * (t - r + 1)) + r;
 };
-class Cr extends E {
+class mt extends B {
   constructor(r) {
     super("CameraComponent", r), this.update = () => {
       this.forwards = [
         Math.cos(C(this.parent.transformComponent.eulers[2])) * Math.cos(C(this.parent.transformComponent.eulers[1])),
         Math.sin(C(this.parent.transformComponent.eulers[2])) * Math.cos(C(this.parent.transformComponent.eulers[1])),
         Math.sin(C(this.parent.transformComponent.eulers[1]))
-      ], S(this.right, this.forwards, [0, 0, 1]), S(this.up, this.right, this.forwards);
-      let t = w();
-      R(
+      ], q(this.right, this.forwards, [0, 0, 1]), q(this.up, this.right, this.forwards);
+      let t = z();
+      I(
         t,
         new Float32Array(this.parent.transformComponent.position),
         this.forwards
-      ), ae(
+      ), pe(
         this.view,
         new Float32Array(this.parent.transformComponent.position),
         t,
         this.up
       );
-    }, this.getView = () => this.view, this.view = B(), this.forwards = w(), this.right = w(), this.up = w();
+    }, this.getView = () => this.view, this.view = L(), this.forwards = z(), this.right = z(), this.up = z();
   }
 }
-class Tr extends E {
+var A = /* @__PURE__ */ ((e) => (e[e.QUAD = 0] = "QUAD", e[e.TRIANGLE = 1] = "TRIANGLE", e[e.OBJECT = 2] = "OBJECT", e))(A || {});
+class b {
+  constructor() {
+    this.initialized = !1, this.initialize = (r) => {
+      this.initialized || (this.bufferUsageFlags = GPUBufferUsage.VERTEX | GPUBufferUsage.COPY_DST, this.bufferDescriptor = {
+        size: this.verticies.byteLength,
+        usage: this.bufferUsageFlags,
+        mappedAtCreation: !0
+      }, this.buffer = r.createBuffer(this.bufferDescriptor), new Float32Array(this.buffer.getMappedRange()).set(this.verticies), this.buffer.unmap(), this.bufferLayout = {
+        arrayStride: 20,
+        attributes: [
+          {
+            shaderLocation: 0,
+            format: "float32x3",
+            offset: 0
+          },
+          {
+            shaderLocation: 1,
+            format: "float32x2",
+            offset: 12
+          }
+        ]
+      }, this.initialized = !0);
+    };
+  }
+}
+class Mt extends b {
+  // Assuming buffer is of type GPUBuffer
+  constructor() {
+    super(), this.v = [], this.vt = [], this.vn = [];
+  }
+  async setup(r, t) {
+    await this.readFile(t), this.verticieCount = this.verticies.length / 5, this.setupBuffer(r);
+  }
+  async readFile(r) {
+    const i = (await (await fetch(r)).text()).split(`
+`), a = [];
+    i.forEach((s) => {
+      const c = s.trim().split(/\s+/);
+      switch (c[0]) {
+        case "v":
+          this.readVertexLine(c);
+          break;
+        case "vt":
+          this.readTextCoordLine(c);
+          break;
+        case "vn":
+          this.readNormalLine(c);
+          break;
+        case "f":
+          this.readFaceLine(c, a);
+          break;
+      }
+    }), this.verticies = new Float32Array(a);
+  }
+  readVertexLine(r) {
+    const t = [parseFloat(r[1]), parseFloat(r[2]), parseFloat(r[3])];
+    this.v.push(t);
+  }
+  readTextCoordLine(r) {
+    const t = [parseFloat(r[1]), parseFloat(r[2])];
+    this.vt.push(t);
+  }
+  readNormalLine(r) {
+    const t = [parseFloat(r[1]), parseFloat(r[2]), parseFloat(r[3])];
+    this.vn.push(t);
+  }
+  readFaceLine(r, t) {
+    r.slice(1).forEach((n) => {
+      this.readCorner(n, t);
+    });
+  }
+  readCorner(r, t) {
+    const [n, i, a] = r.split("/").map((h) => parseInt(h, 10) - 1), s = this.v[n], c = this.vt[i];
+    !s || !c || t.push(s[0], s[1], s[2], c[0], c[1]);
+  }
+  setupBuffer(r) {
+    this.buffer = r.createBuffer({
+      size: this.verticies.byteLength,
+      usage: GPUBufferUsage.VERTEX,
+      mappedAtCreation: !0
+    }), new Float32Array(this.buffer.getMappedRange()).set(this.verticies), this.buffer.unmap();
+  }
+}
+const x = class x {
+  constructor() {
+  }
+  static async initialize(r) {
+    if (x.instance) {
+      console.warn("Renderer is already initialized.");
+      return;
+    }
+    x.adapter = r, x.instance = await this.adapter.requestDevice();
+  }
+  static getInstance() {
+    if (!x.instance)
+      throw new Error("Device is not initialized. Call initialize() first.");
+    return x.instance;
+  }
+};
+x.instance = null;
+let E = x;
+class gt extends b {
   constructor(r) {
-    super("TriangleComponent", r), this.update = () => {
-      this.parent.transformComponent.eulers[2] += 1, this.parent.transformComponent.eulers[2] %= 360, this.model = B(), O(
-        this.model,
-        this.model,
-        this.parent.transformComponent.position
-      ), te(
-        this.model,
-        this.model,
-        C(this.parent.transformComponent.eulers[2])
-      );
-    }, this.getModel = () => this.model;
+    super(), this.verticies = new Float32Array([
+      -0.5,
+      -0.5,
+      0,
+      0,
+      0,
+      0.5,
+      -0.5,
+      0,
+      1,
+      0,
+      0.5,
+      0.5,
+      0,
+      1,
+      1,
+      0.5,
+      0.5,
+      0,
+      1,
+      1,
+      -0.5,
+      0.5,
+      0,
+      0,
+      1,
+      -0.5,
+      -0.5,
+      0,
+      0,
+      0
+    ]), this.verticieCount = 6, this.initialize(r);
   }
 }
-class Gr extends E {
+class yt extends b {
   constructor(r) {
-    super("QuadComponent", r), this.update = () => {
-      this.model = B(), O(
-        this.model,
-        this.model,
-        this.parent.transformComponent.position
-      );
-    }, this.getModel = () => this.model;
+    super(), this.verticies = new Float32Array([
+      0,
+      0,
+      0.5,
+      0.5,
+      0,
+      0,
+      -0.5,
+      -0.5,
+      0,
+      1,
+      0,
+      0.5,
+      -0.5,
+      1,
+      1
+    ]), this.verticieCount = 3, this.initialize(r);
   }
 }
-class Lr {
+class fe extends B {
+  constructor(r, t, n) {
+    super("MeshComponent", r), this.update = () => {
+      this.model = L(), U(this.model, this.model, this.parent.transformComponent.position), U(this.model, this.model, this.parent.transformComponent.position), de(this.model, this.model, C(this.parent.transformComponent.eulers[2]));
+    }, this.setupMesh = async () => {
+      const i = E.getInstance();
+      switch (this.meshType) {
+        case A.OBJECT:
+          if (!this.objectUrl) throw new Error("ObjectURL not specified when creating object mesh.");
+          const a = new Mt();
+          await a.setup(i, this.objectUrl), this.mesh = a;
+          break;
+        case A.QUAD:
+          this.mesh = new gt(i);
+          break;
+        case A.TRIANGLE:
+          this.mesh = new yt(i);
+          break;
+        default:
+          throw new Error("Invalid MeshType specified.");
+      }
+    }, this.getModel = () => this.model, this.getMesh = () => this.mesh, this.meshType = t, this.objectUrl = n;
+  }
+}
+class Et {
   constructor(r) {
     this.update = () => {
       let n = 0;
       this.gameObjects.forEach((i) => {
         i.components.forEach((a) => {
-          if (a.update(), a instanceof Tr) {
-            const s = a.getModel();
-            for (let c = 0; c < 16; c++)
-              this.objectData[16 * n + c] = s.at(c);
-            n++;
-          } else if (a instanceof Gr) {
+          if (a.update(), a instanceof fe) {
             const s = a.getModel();
             for (let c = 0; c < 16; c++)
               this.objectData[16 * n + c] = s.at(c);
@@ -487,12 +826,12 @@ class Lr {
     }), this.addGameObject = (n) => {
       this.gameObjects.push(n);
     }, this.getGameObjects = () => this.gameObjects;
-    const t = r.getComponent(Cr);
+    const t = r.getComponent(mt);
     if (!t) throw new Error("Camera component not found within gameobject specified.");
     this.camera = t, this.gameObjects = [], this.objectData = new Float32Array(16 * 1024), this.gameObjects.push(r);
   }
 }
-const b = `struct TransformData {
+const F = `struct TransformData {
     view: mat4x4<f32>,
     projection: mat4x4<f32>
 };
@@ -527,32 +866,42 @@ fn vs_main(
 @fragment
 fn fs_main(@location(0) TexCoord : vec2<f32>) -> @location(0) vec4<f32> {
     return textureSample(myTexture, mySampler, TexCoord);
-};`, x = class x {
+};`, y = class y {
   constructor() {
   }
   static async initialize(r) {
-    if (x.instance) {
+    if (y.instance) {
       console.warn("Renderer is already initialized.");
       return;
     }
-    x.adapter = r, x.instance = await this.adapter.requestDevice();
+    y.canvas = r, y.instance = new wt(r);
   }
   static getInstance() {
-    if (!x.instance)
-      throw new Error("Device is not initialized. Call initialize() first.");
-    return x.instance;
+    if (!y.instance)
+      throw new Error("Renderer is not initialized. Call initialize() first.");
+    return y.instance;
   }
 };
-x.instance = null;
-let G = x;
-class Ar {
+y.instance = null, y.canvas = null;
+let T = y;
+class xt extends B {
+  constructor(r, t) {
+    super("MaterialComponent", r), this.setMaterial = (n) => {
+      const a = T.getInstance().materials.filter((s) => s.url == n);
+      if (a.length > 1)
+        throw new Error("Multiple instances of same material url found. Please remove duplicates.");
+      this.material = a[0];
+    }, this.setMaterial(t);
+  }
+}
+class wt {
   constructor(r) {
     this.addTexture = (t) => {
       this.materials.push(t);
     }, this.initialize = async () => {
       await this.setupDevice(), await this.createBindGroupLayouts(), await this.createAssets(), await this.createDepthBufferResources(), await this.createPipeline(), await this.createBindGroup();
     }, this.setupDevice = async () => {
-      this.adapter = await navigator.gpu.requestAdapter(), await G.initialize(this.adapter), this.device = G.getInstance(), this.context = this.canvas.getContext("webgpu"), this.format = "bgra8unorm", this.context.configure({
+      this.adapter = await navigator.gpu.requestAdapter(), await E.initialize(this.adapter), this.device = E.getInstance(), this.context = this.canvas.getContext("webgpu"), this.format = "bgra8unorm", this.context.configure({
         device: this.device,
         format: this.format,
         alphaMode: "opaque"
@@ -593,7 +942,7 @@ class Ar {
         usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST
       });
       const t = {
-        size: 64 * 2048,
+        size: 64 * 1024,
         usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_DST
       };
       this.objectBuffer = this.device.createBuffer(t);
@@ -632,7 +981,7 @@ class Ar {
       });
       this.pipeline = this.device.createRenderPipeline({
         vertex: {
-          module: this.device.createShaderModule({ code: b }),
+          module: this.device.createShaderModule({ code: F }),
           entryPoint: "vs_main",
           buffers: [
             // hard-code buffer layout TO BE CHANGED!!!
@@ -655,7 +1004,7 @@ class Ar {
         },
         fragment: {
           module: this.device.createShaderModule({
-            code: b
+            code: F
           }),
           entryPoint: "fs_main",
           targets: [{ format: this.format }]
@@ -681,12 +1030,13 @@ class Ar {
         ]
       });
     }, this.startRender = async (t) => {
+      var l;
       this.activeScene = t;
       const n = t.getObjectData();
       if (!this.device)
         throw new Error("GPUDevice is not initialized.");
-      const i = B();
-      ie(i, Math.PI / 4, 800 / 600, 0.1, 500);
+      const i = L();
+      ve(i, Math.PI / 4, 800 / 600, 0.1, 5e4);
       const a = n.viewTransform;
       this.device.queue.writeBuffer(
         this.objectBuffer,
@@ -694,11 +1044,7 @@ class Ar {
         n.modelTransforms,
         0,
         n.modelTransforms.length
-      ), this.device.queue.writeBuffer(this.uniformBuffer, 0, a), this.device.queue.writeBuffer(
-        this.uniformBuffer,
-        64,
-        i
-      );
+      ), this.device.queue.writeBuffer(this.uniformBuffer, 0, a), this.device.queue.writeBuffer(this.uniformBuffer, 64, i);
       const s = this.device.createCommandEncoder(), c = this.context.getCurrentTexture().createView(), h = s.beginRenderPass({
         colorAttachments: [
           {
@@ -713,49 +1059,29 @@ class Ar {
       h.setPipeline(this.pipeline), h.setBindGroup(0, this.frameBindGroup);
       const f = t.getGameObjects();
       let o = 0;
-      f.forEach((l) => {
-        l.createMeshes(), h.setVertexBuffer(0, l.mesh.buffer), h.setBindGroup(1, l.material.bindGroup), h.draw(
-          l.verticieCount,
-          1,
-          0,
-          o * l.verticieCount
-        ), o++;
-      }), h.end(), this.device.queue.submit([s.finish()]);
+      for (const u of f) {
+        const d = u.getComponent(xt), v = u.getComponent(fe);
+        if (!d || !v) continue;
+        (l = v == null ? void 0 : v.mesh) != null && l.initialized || await v.setupMesh(), v.mesh.initialized = !0;
+        const p = v.getMesh();
+        p.buffer && d.material && (h.setVertexBuffer(0, p.buffer), h.setBindGroup(1, d.material.bindGroup), h.draw(p.verticieCount, 1, 0, o), o++);
+      }
+      h.end(), this.device.queue.submit([s.finish()]);
     }, this.canvas = r, this.materials = [];
   }
 }
-const y = class y {
-  constructor() {
-  }
-  static async initialize(r) {
-    if (y.instance) {
-      console.warn("Renderer is already initialized.");
-      return;
-    }
-    y.canvas = r, y.instance = new Ar(r);
-  }
-  static getInstance() {
-    if (!y.instance)
-      throw new Error("Renderer is not initialized. Call initialize() first.");
-    return y.instance;
-  }
-};
-y.instance = null, y.canvas = null;
-let A = y;
-class Dr {
+class At {
   constructor(r) {
     if (this.createRenderer = async () => {
-      this.rendererInitialized = A.initialize(this.canvas), await this.rendererInitialized, this.renderer = A.getInstance();
+      this.rendererInitialized = T.initialize(this.canvas), await this.rendererInitialized, this.renderer = T.getInstance();
     }, this.getRenderer = async () => (await this.rendererInitialized, this.renderer), this.validateActiveScene = () => !0, this.startRenderProcess = async () => {
       await this.rendererInitialized, await this.renderer.initialize(), requestAnimationFrame(this.gameLoop);
     }, this.gameLoop = async () => {
       if (!this.activeScene)
         throw new Error("No current active scene was set.");
       this.activeScene.update(), await this.rendererInitialized, this.renderer.startRender(this.activeScene), requestAnimationFrame(this.gameLoop);
-    }, !r)
-      throw new Error("Improper canvas specificed in initializing engine.");
-    if (this.canvas = r, navigator.gpu)
-      console.log("WebGPU supported, started to run engine.");
+    }, !r) throw new Error("Improper canvas specificed in initializing engine.");
+    if (this.canvas = r, navigator.gpu) console.log("WebGPU supported, started to run engine.");
     else throw new Error("WebGPU is not supported on this browser.");
     this.createRenderer();
   }
@@ -766,128 +1092,14 @@ class Dr {
     this._activeScene = r;
   }
 }
-class Br extends E {
+class zt extends B {
   constructor(r) {
-    super("TransformComponent", r), this.position = [0, 0, 0], this.eulers = w(), this.eulers[2] = 0;
+    super("TransformComponent", r), this.position = [0, 0, 0], this.eulers = z(), this.eulers[2] = 0;
   }
 }
-class Er {
+class Bt {
   constructor(r) {
-    const t = new Float32Array([
-      0,
-      0,
-      0.5,
-      0.5,
-      0,
-      0,
-      -0.5,
-      -0.5,
-      0,
-      1,
-      0,
-      0.5,
-      -0.5,
-      1,
-      1
-    ]), n = GPUBufferUsage.VERTEX | GPUBufferUsage.COPY_DST, i = {
-      size: t.byteLength,
-      usage: n,
-      mappedAtCreation: !0
-    };
-    this.buffer = r.createBuffer(i), new Float32Array(this.buffer.getMappedRange()).set(t), this.buffer.unmap(), this.bufferLayout = {
-      arrayStride: 20,
-      attributes: [
-        {
-          shaderLocation: 0,
-          format: "float32x3",
-          offset: 0
-        },
-        {
-          shaderLocation: 1,
-          format: "float32x2",
-          offset: 12
-        }
-      ]
-    };
-  }
-}
-class Sr {
-  constructor(r) {
-    const t = new Float32Array([
-      -0.5,
-      -0.5,
-      0,
-      0,
-      0,
-      0.5,
-      -0.5,
-      0,
-      1,
-      0,
-      0.5,
-      0.5,
-      0,
-      1,
-      1,
-      0.5,
-      0.5,
-      0,
-      1,
-      1,
-      -0.5,
-      0.5,
-      0,
-      0,
-      1,
-      -0.5,
-      -0.5,
-      0,
-      0,
-      0
-    ]), n = GPUBufferUsage.VERTEX | GPUBufferUsage.COPY_DST, i = {
-      size: t.byteLength,
-      usage: n,
-      mappedAtCreation: !0
-    };
-    this.buffer = r.createBuffer(i), new Float32Array(this.buffer.getMappedRange()).set(t), this.buffer.unmap(), this.bufferLayout = {
-      arrayStride: 20,
-      attributes: [
-        {
-          shaderLocation: 0,
-          format: "float32x3",
-          offset: 0
-        },
-        {
-          shaderLocation: 1,
-          format: "float32x2",
-          offset: 12
-        }
-      ]
-    };
-  }
-}
-var P = /* @__PURE__ */ ((e) => (e[e.TRIANGLE = 0] = "TRIANGLE", e[e.QUAD = 1] = "QUAD", e))(P || {});
-class Ur {
-  constructor(r, t, n) {
-    this.verticieCount = 3, this.setMaterial = (i) => {
-      const s = A.getInstance().materials.filter((c) => c.url == i);
-      if (s.length > 1)
-        throw new Error(
-          "Multiple instances of same material url found. Please remove duplicates."
-        );
-      console.log(s[0], this), this.material = s[0];
-    }, this.createMeshes = () => {
-      switch (this.meshType) {
-        case P.QUAD:
-          this.mesh = new Sr(G.getInstance()), this.verticieCount = 6;
-          break;
-        case P.TRIANGLE:
-          this.mesh = new Er(G.getInstance()), this.verticieCount = 3;
-          break;
-        default:
-          throw new Error("Mesh type specified is invalid.");
-      }
-    }, this.name = r, this.instanceId = zr(10), this.components = [], this.transformComponent = new Br(this), this.meshType = t, this.setMaterial(n.url);
+    this.name = r, this.instanceId = pt(10), this.components = [], this.transformComponent = new zt(this);
   }
   getComponent(r) {
     for (const t of this.components)
@@ -902,7 +1114,7 @@ class Ur {
     return this.components.push(r), r;
   }
 }
-class qr {
+class qt {
   constructor(r) {
     if (this.initialize = async (n, i, a) => {
       const c = await (await fetch(i)).blob(), h = await createImageBitmap(c);
@@ -951,7 +1163,7 @@ class qr {
         { texture: this.texture },
         a.size
       );
-    }, this.url = r, A.getInstance().materials.filter(
+    }, this.url = r, T.getInstance().materials.filter(
       (n) => n.url == r
     ).length !== 0)
       throw new Error(
@@ -960,21 +1172,24 @@ class qr {
   }
 }
 export {
-  E as BaseComponent,
-  Cr as CameraComponent,
+  B as BaseComponent,
+  mt as CameraComponent,
   C as Deg2Rad,
-  Dr as EpicEngine,
-  Ur as GameObject,
-  qr as Material,
-  P as ObjectTypes,
-  Gr as QuadComponent,
-  Sr as QuadMesh,
-  Ar as Renderer,
-  Lr as Scene,
-  Br as TransformComponent,
-  Tr as TriangleComponent,
-  Er as TriangleMesh,
-  zr as generateId,
-  Pr as vec3,
-  $r as vec4
+  At as EpicEngine,
+  Bt as GameObject,
+  qt as Material,
+  xt as MaterialComponent,
+  b as Mesh,
+  fe as MeshComponent,
+  A as MeshTypes,
+  Mt as ObjectMesh,
+  gt as QuadMesh,
+  wt as Renderer,
+  Et as Scene,
+  zt as TransformComponent,
+  yt as TriangleMesh,
+  pt as generateId,
+  Tt as vec2,
+  $t as vec3,
+  Ct as vec4
 };

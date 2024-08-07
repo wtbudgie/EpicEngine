@@ -1,9 +1,7 @@
 import { CameraComponent } from "../GameObjects/Components/CameraComponent";
+import { MeshComponent } from "../GameObjects/Components/MeshComponent";
 import { GameObject } from "../GameObjects/GameObject";
-import { TriangleComponent } from "../GameObjects/Components/TriangleComponent";
-import { QuadComponent } from "../GameObjects/Components/QuadComponent";
-import { mat4, vec3 } from "gl-matrix";
-import { ObjectTypes, RenderData } from "./Defininitions";
+import { RenderData } from "./Renderer";
 
 export class Scene {
     private camera: CameraComponent;
@@ -26,13 +24,7 @@ export class Scene {
         this.gameObjects.forEach((object) => {
             object.components.forEach((comp) => {
                 comp.update();
-                if (comp instanceof TriangleComponent) {
-                    const model = comp.getModel();
-                    for (let j = 0; j < 16; j++) {
-                        this.objectData[16 * i + j] = <number>model.at(j);
-                    }
-                    i++;
-                } else if (comp instanceof QuadComponent) {
+                if (comp instanceof MeshComponent) {
                     const model = comp.getModel();
                     for (let j = 0; j < 16; j++) {
                         this.objectData[16 * i + j] = <number>model.at(j);
