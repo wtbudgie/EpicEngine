@@ -1,14 +1,34 @@
+import RendererSingleton from "./Singletons/RendererSingleton";
+
 export class Material {
+  url: string;
   texture!: GPUTexture;
   view!: GPUTextureView;
+  bindGroup!: GPUBindGroup;
+
+  samplerDescriptor!: GPUSamplerDescriptor;
   sampler!: GPUSampler;
 
-  initialize = async (device: GPUDevice, url: string) => {
+  constructor(imageUrl: string) {
+    this.url = imageUrl;
+    const mats = RendererSingleton.getInstance().materials.filter(
+      (m) => m.url == imageUrl
+    );
+    if (mats.length !== 0)
+      throw new Error(
+        "Material with image already found, please use existing material."
+      );
+  }
+
+  initialize = async (
+    device: GPUDevice,
+    url: string,
+    bindGroupLayout: GPUBindGroupLayout
+  ) => {
     const response: Response = await fetch(url);
     const blob: Blob = await response.blob();
-    const imageData: ImageBitmap = await createImageBitmap(blob);
-
-    await this.loadImageBitmap(device, imageData);
+    const imageData = await createImageBitmap(blob);
+    this.loadImageBitmap(device, imageData);
 
     const viewDescriptor: GPUTextureViewDescriptor = {
       format: "rgba8unorm",
@@ -30,6 +50,21 @@ export class Material {
       maxAnisotropy: 1,
     };
     this.sampler = device.createSampler(samplerDescriptor);
+
+    const bindGroup = device.createBindGroup({
+      layout: bindGroupLayout,
+      entries: [
+        {
+          binding: 0,
+          resource: this.view,
+        },
+        {
+          binding: 1,
+          resource: this.sampler,
+        },
+      ],
+    });
+    this.bindGroup = bindGroup;
   };
 
   loadImageBitmap = async (device: GPUDevice, imageData: ImageBitmap) => {

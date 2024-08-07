@@ -5,7 +5,10 @@ import {
   CameraComponent,
   TriangleComponent,
   BaseComponent,
+  Material,
   vec3,
+  ObjectTypes,
+  QuadComponent,
 } from "../dist/EpicEngine.es.js";
 
 let camera;
@@ -88,11 +91,26 @@ class PlayerMovementComponent extends BaseComponent {
   };
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
   const canvasElement = document.getElementById("canvas");
   const epicEngine = new EpicEngine(canvasElement);
+  const renderer = await epicEngine.getRenderer();
 
-  const cameraObject = new GameObject("cameraObject");
+  const miotMaterial = new Material("miot.jpg");
+  renderer.addTexture(miotMaterial);
+
+  const cunnMaterial = new Material("wyan.png");
+  renderer.addTexture(cunnMaterial);
+
+  const wyanMaterial = new Material("reayan.jpeg");
+  renderer.addTexture(wyanMaterial);
+
+  const cameraObject = new GameObject(
+    "cameraObject",
+    ObjectTypes.TRIANGLE,
+    miotMaterial
+  );
+  cameraObject.transformComponent.position[0] = 5;
   cameraObject.addComponent(new CameraComponent(cameraObject));
   cameraObject.addComponent(new PlayerMovementComponent(cameraObject));
   const movementComponent = cameraObject.getComponent(PlayerMovementComponent);
@@ -112,12 +130,27 @@ document.addEventListener("DOMContentLoaded", () => {
   epicEngine.activeScene = mainScene;
   epicEngine.startRenderProcess();
 
-  for (let i = 0; i < 50; i++) {
-    const gameObject = new GameObject("triangle");
-    gameObject.addComponent(new TriangleComponent(gameObject));
-    gameObject.transformComponent.position[2] = i;
-    console.log(gameObject.transformComponent.position, "trans");
-    mainScene.addObject(gameObject);
+  const gameObject = new GameObject(
+    "triangle",
+    ObjectTypes.TRIANGLE,
+    wyanMaterial
+  );
+  gameObject.addComponent(new TriangleComponent(gameObject));
+  gameObject.transformComponent.position[1] = 5;
+  mainScene.addGameObject(gameObject);
+
+  const sgameObject = new GameObject("tin", ObjectTypes.TRIANGLE, wyanMaterial);
+  sgameObject.addComponent(new TriangleComponent(gameObject));
+  sgameObject.transformComponent.position[1] = 3;
+  mainScene.addGameObject(sgameObject);
+
+  for (var x = -10; x <= 10; x++) {
+    for (var y = -10; y <= 10; y++) {
+      const quadObject = new GameObject("quad", ObjectTypes.QUAD, cunnMaterial);
+      quadObject.addComponent(new QuadComponent(quadObject));
+      quadObject.transformComponent.position = [x, y, 0];
+      mainScene.addGameObject(quadObject);
+    }
   }
 
   canvas = canvasElement;
